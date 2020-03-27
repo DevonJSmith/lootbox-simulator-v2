@@ -1,0 +1,18 @@
+<div *ngIf="!flipped" [@fadeInOut]> 
+    <mat-card class="lootboxCard">
+        <mat-card-content fxLayout="row" fxLayoutAlign="center center" class="fullSize">
+            <button mat-raised-button color="primary" (click)="revealItem()">Reveal</button>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div *ngIf="flipped" [@fadeInOut]>
+    <mat-card class="lootboxCard">
+        <mat-card-header>
+            <mat-card-title>{{lootboxItem.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{lootboxItem.imgUrl}}" />
+        <mat-card-content>
+            <p>{{lootboxItem.description}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

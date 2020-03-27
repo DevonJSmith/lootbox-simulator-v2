@@ -1,0 +1,31 @@
+<div class="lootboxContainer" [style.height.%]="100">
+    <div fxLayout="column" [style.height.%]="100">
+        <div [style.height.px]="100" fxLayout="column" fxLayoutAlign="center center">
+            <div *ngIf="AllItemsFlipped" class="statusText" [@fadeInOut]>
+                <div >
+                    Congratulations, you got...
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center start" fxFlex="1 0 auto">
+            <div *ngFor='let item of lootBoxItems'>
+                <app-lootbox-item [lootboxItem]='item' (itemFlipped)="LootBoxItemFlipped(item)" ></app-lootbox-item>
+            </div>
+        </div>
+        <div fxFlex="none" fxLayout="column" fxLayoutAlign="start center"  *ngIf="AllItemsFlipped" [@fadeInOut]>
+            <!-- New Loot Box -->
+            <a mat-raised-button [routerLink]="['/']">Generate New Lootbox</a>
+            <!-- Share Buttons -->
+            <div class="urlCopyContainer">
+                <mat-form-field>
+                    <mat-label>
+                        Shareable Link
+                    </mat-label>
+                    <input matInput type='text' [value]='platformLocation.href' disabled />
+                </mat-form-field>
+                <button mat-raised-button ngxClipboard [cbContent]='platformLocation.href' (cbOnSuccess)='LinkCopied()'>Copy</button>
+
+            </div>
+        </div>
+    </div>
+</div>
