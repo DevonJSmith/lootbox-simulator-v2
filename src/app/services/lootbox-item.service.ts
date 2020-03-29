@@ -23,11 +23,6 @@ export class LootboxItemService {
         flipped: false
       });
     });
-    // return {
-    //   name: this.randomTextService.getRandomName(numberSeed),
-    //   description: this.randomTextService.getRandomDescription(numberSeed),
-    //   imgUrl: this.randomImageService.getRandomImgUrl(numberSeed)
-    // } as LootBoxItemModel;
   }
 
   private generateSeed(seed: string | null): number {
