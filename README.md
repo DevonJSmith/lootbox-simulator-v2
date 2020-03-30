@@ -15,7 +15,7 @@ A working demo of this project can be found [here.](https://devonjsmith.github.i
 - [Material UI](https://material.angular.io/)
 - Libraries / npm Packages
   - [Faker.js](https://github.com/marak/Faker.js/)
-  - [Lorem Picsum](https://www.npmjs.com/package/lorem-picsum)
+  - [Lorem Picsum](https://picsum.photos/)
   - [Angular Flex-Layout](https://github.com/angular/flex-layout)
   - [ngx-clipboard](https://www.npmjs.com/package/ngx-clipboard)
 
